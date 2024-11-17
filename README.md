@@ -6,6 +6,7 @@ ________________________________________
 
 Project Overview
 The app provides a structured way to create, organize, and manage tasks. It uses React's state management to dynamically handle task operations and ensures tasks are saved in the browser's local storage for persistence.
+![alt text](image.png)
 ________________________________________
 
 How the Code Works

@@ -52,6 +52,7 @@ const sortedTasks = [...filteredTasks].sort((a, b) => {
   return priorityOrder[a.priority] - priorityOrder[b.priority];
 });
 High-priority tasks appear at the top, followed by Medium and Low.
+![alt text](image-3.png)
 ________________________________________
 d. Task Filtering
 The sidebar allows users to filter tasks by categories:
@@ -67,6 +68,8 @@ const filteredTasks = tasks.filter((task) => {
   if (activeTab === 'Upcoming') return !task.completed;
   return true;
 });
+![alt text](image-1.png)
+![alt text](image-2.png)
 ________________________________________
 e. Task Search
 Users can search for tasks using the search bar in the sidebar. The search query dynamically filters tasks based on their text:
@@ -74,6 +77,7 @@ Users can search for tasks using the search bar in the sidebar. The search query
 const visibleTasks = sortedTasks.filter((task) =>
   task.text.toLowerCase().includes(searchQuery.toLowerCase())
 );
+![alt text](image-4.png)
 ________________________________________
 f. Task Completion
 Tasks can be marked as completed or uncompleted by toggling their completed state:
@@ -113,6 +117,10 @@ Technologies Used
 •	Icons: Font Awesome React Icons
 •	State Management: React's useState and useEffect
 •	Data Storage: Browser’s Local Storage
+
+
+live Preview:
+netlify link:  https://idyllic-kangaroo-397d43.netlify.app
 ________________________________________
 Developer
 This project was created by Rohit.

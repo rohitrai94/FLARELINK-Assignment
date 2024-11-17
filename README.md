@@ -17,6 +17,7 @@ The application is divided into multiple components for better readability and m
 •	TaskList.jsx: Displays the list of tasks and manages their rendering and behavior.
 •	TaskItem.jsx: Represents a single task, providing options to mark as complete or delete.
 •	App.css: Contains all the styles for the application.
+
 ________________________________________
 
 2. Core Features and Their Implementation
@@ -35,6 +36,7 @@ const handleAddTask = () => {
     setPriority('Medium');
   }
 };
+![alt text](image-5.png)
 ________________________________________
 b. Task Storage
 Tasks are saved in the browser’s local storage using React’s useEffect:

@@ -1,0 +1,274 @@
+.d-flex {
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px 40px;
+  transition: all 0.3s;
+}
+/* Task List Styling */
+.task-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  padding: 0px 5%;
+}
+/* Add Task Section */
+.add-task-section {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+  margin-top: auto;
+}
+
+.priority-dropdown {
+  width: 100px;
+  margin-right: 10px;
+}
+
+/* Task Row Colors Based on Priority */
+.priority-high {
+  background-color: rgba(255, 0, 0, 0.1); /* Light Red */
+  border-left: 5px solid red;
+}
+
+.priority-medium {
+  background-color: rgba(255, 165, 0, 0.1); /* Light Orange */
+  border-left: 5px solid orange;
+}
+
+.priority-low {
+  background-color: rgba(0, 255, 0, 0.1); /* Light Green */
+  border-left: 5px solid green;
+}
+
+/* Other Styling */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.task-item:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.completed-task {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Completed task count */
+.completed-count {
+  font-weight: normal;
+  font-size: 0.9em;
+  color: gray;
+}
+
+/* Checkbox styling */
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.checked {
+  color: green;
+  font-size: 16px;
+}
+
+.checkbox:hover {
+  border-color: green;
+}
+
+/* Completed task style */
+.completed-task {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.completed-count {
+  font-size: 14px;
+  color: gray;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+
+/* Add Task Section at the Bottom Inside Task List */
+.add-task-section {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+  margin-top: auto;
+}
+
+.add-task-section input {
+  flex: 1;
+}
+
+.add-task-section button {
+  margin-left: 10px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #f4f4f4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.sidebar-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.menu-icon {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.menu-icon-overlay {
+  font-size: 24px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  color: #007bff;
+  z-index: 1100; /* Keep it above other elements */
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.nav-item button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  border: none;
+  background: none;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.nav-item.active button {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Main content styling */
+.main-content {
+  margin-left: 250px; /* Full width of the sidebar */
+  padding: 30px;
+  transition: margin-left 0.3s ease-in-out; /* Smooth transition for sliding */
+  width: calc(100% - 250px); /* Ensure it doesn't overflow */
+}
+
+.main-content.expanded {
+  margin-left: 0; /* No sidebar offset */
+  width: 100%; /* Take full width when the sidebar is closed */
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+
+#searchInput {
+  width: 100%;
+  padding: 8px;
+  margin: 0px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  
+}
+
+.priority-badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+
+.priority-badge.high {
+  background-color: red;
+  color: white;
+}
+
+.priority-badge.medium {
+  background-color: orange;
+  color: white;
+}
+
+.priority-badge.low {
+  background-color: green;
+  color: white;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+
+
